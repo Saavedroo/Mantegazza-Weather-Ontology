@@ -1,0 +1,623 @@
+Prefix(:=<http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/léom/ontologies/2022/4/weather-station>
+Annotation(rdfs:comment "Une ontologie décrivant le fonctionnement d'une station météo : 
+Sa localisation géographique, ses capteurs, les types d'évènements qu'elle peut détecter et décrire.")
+
+Declaration(Class(<http://www.meteo.com/meteo.owl#Brouillard>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Capteur>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Direction>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Evenement>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Gel>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Humidite>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Localisation>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Mesure>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Neige>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Observation>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Orage>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Planète>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Pluie>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Precipitation>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Pression>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Rafales>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Region>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Station>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Temperature>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Tempête>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Vent>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Vent_moyen>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Ville>))
+Declaration(Class(<http://www.meteo.com/meteo.owl#Visibilite>))
+Declaration(Class(:Blizzard))
+Declaration(Class(:Ouragan))
+Declaration(Class(:Pays))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#a_capteur>))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#a_region>))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#a_ville>))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#effectue>))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#effectuee_par>))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#est_capteur_de>))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#est_observation_de>))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#est_region_de>))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#est_ville_de>))
+Declaration(ObjectProperty(<http://www.meteo.com/meteo.owl#fait_partie_de_observation>))
+Declaration(ObjectProperty(:a_pays))
+Declaration(ObjectProperty(:precede))
+Declaration(ObjectProperty(:succede_a))
+Declaration(ObjectProperty(<http://www.semanticweb.org/léom/ontologies/2022/4/weather-station#est_pays_de>))
+Declaration(DataProperty(<http://www.meteo.com/meteo.owl#a_altitude>))
+Declaration(DataProperty(<http://www.meteo.com/meteo.owl#a_latitude>))
+Declaration(DataProperty(<http://www.meteo.com/meteo.owl#a_longitude>))
+Declaration(DataProperty(<http://www.meteo.com/meteo.owl#a_valeur>))
+Declaration(DataProperty(:a_date))
+Declaration(NamedIndividual(:EMSE_Anémomètre))
+Declaration(NamedIndividual(:EMSE_Girouette))
+Declaration(NamedIndividual(:EMSE_Humidite))
+Declaration(NamedIndividual(:EMSE_Precipitation))
+Declaration(NamedIndividual(:EMSE_Pression))
+Declaration(NamedIndividual(:EMSE_Rafales))
+Declaration(NamedIndividual(:EMSE_Temperature))
+Declaration(NamedIndividual(:EMSE_Visibilite))
+Declaration(NamedIndividual(:Humidite_23h06))
+Declaration(NamedIndividual(:Humidité_23h00))
+Declaration(NamedIndividual(:Humidité_23h12))
+Declaration(NamedIndividual(:Precipitation_23h00))
+Declaration(NamedIndividual(:Precipitation_23h06))
+Declaration(NamedIndividual(:Precipitation_23h12))
+Declaration(NamedIndividual(:Pression_23h00))
+Declaration(NamedIndividual(:Pression_23h06))
+Declaration(NamedIndividual(:Pression_23h12))
+Declaration(NamedIndividual(:Rafales_23h00))
+Declaration(NamedIndividual(:Rafales_23h06))
+Declaration(NamedIndividual(:Rafales_23h12))
+Declaration(NamedIndividual(:Rhone-Alpes))
+Declaration(NamedIndividual(:Saint-Etienne))
+Declaration(NamedIndividual(:Station_EMSE))
+Declaration(NamedIndividual(:Temperature_23h00))
+Declaration(NamedIndividual(:Temperature_23h06))
+Declaration(NamedIndividual(:Temperature_23h12))
+Declaration(NamedIndividual(:Vent_moyen_23h00))
+Declaration(NamedIndividual(:Vent_moyen_23h06))
+Declaration(NamedIndividual(:Vent_moyen_23h12))
+Declaration(NamedIndividual(:Visibilite_23h06))
+Declaration(NamedIndividual(:Visibilite_23h12))
+Declaration(NamedIndividual(:Visiblite_23h00))
+Declaration(NamedIndividual(<http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.meteo.com/meteo.owl#a_capteur> (<http://www.meteo.com/meteo.owl#a_capteur>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#a_capteur> "Relation entre les classes Station et Capteur. Indique qu'une station possède un capteur.
+Inverse de la relation 'est_capteur_de'.")
+InverseObjectProperties(<http://www.meteo.com/meteo.owl#a_capteur> <http://www.meteo.com/meteo.owl#est_capteur_de>)
+InverseFunctionalObjectProperty(<http://www.meteo.com/meteo.owl#a_capteur>)
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#a_capteur> <http://www.meteo.com/meteo.owl#Station>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#a_capteur> <http://www.meteo.com/meteo.owl#Capteur>)
+
+# Object Property: <http://www.meteo.com/meteo.owl#a_region> (<http://www.meteo.com/meteo.owl#a_region>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#a_region> "Relation entre les classes Ville et Region. Indique qu'une ville se situe dans une région.
+Inverse de la relation 'est_region_de'.")
+InverseObjectProperties(<http://www.meteo.com/meteo.owl#a_region> <http://www.meteo.com/meteo.owl#est_region_de>)
+TransitiveObjectProperty(<http://www.meteo.com/meteo.owl#a_region>)
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#a_region> <http://www.meteo.com/meteo.owl#Ville>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#a_region> <http://www.meteo.com/meteo.owl#Region>)
+
+# Object Property: <http://www.meteo.com/meteo.owl#a_ville> (<http://www.meteo.com/meteo.owl#a_ville>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#a_ville> "Relation entre les classes Station et Ville. Indique qu'une station se situe dans une ville.
+Inverse de la relation 'est_ville_de'.")
+InverseObjectProperties(<http://www.meteo.com/meteo.owl#a_ville> <http://www.meteo.com/meteo.owl#est_ville_de>)
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#a_ville> <http://www.meteo.com/meteo.owl#Station>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#a_ville> <http://www.meteo.com/meteo.owl#Ville>)
+
+# Object Property: <http://www.meteo.com/meteo.owl#effectue> (<http://www.meteo.com/meteo.owl#effectue>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#effectue> "Relation entre les classes Capteur et Mesure. Indique qu'un capteur effectue une mesure.
+Inverse de la relation 'effectuee_par'.")
+InverseObjectProperties(<http://www.meteo.com/meteo.owl#effectue> <http://www.meteo.com/meteo.owl#effectuee_par>)
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#effectue> <http://www.meteo.com/meteo.owl#Capteur>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#effectue> <http://www.meteo.com/meteo.owl#Mesure>)
+
+# Object Property: <http://www.meteo.com/meteo.owl#effectuee_par> (<http://www.meteo.com/meteo.owl#effectuee_par>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#effectuee_par> "Relation entre les classes Mesure et Capteur. Indique qu'une mesure est effectuée par un capteur.
+Inverse de la relation 'effectue'.")
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Mesure>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Capteur>)
+
+# Object Property: <http://www.meteo.com/meteo.owl#est_capteur_de> (<http://www.meteo.com/meteo.owl#est_capteur_de>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#est_capteur_de> "Relation entre les classes Capteur et Station. Indique qu'un capteur appartient à une station.
+Inverse de la relation 'a_capteur'.")
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#est_capteur_de> <http://www.meteo.com/meteo.owl#Capteur>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#est_capteur_de> <http://www.meteo.com/meteo.owl#Station>)
+
+# Object Property: <http://www.meteo.com/meteo.owl#est_observation_de> (<http://www.meteo.com/meteo.owl#est_observation_de>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#est_observation_de> "Relation entre les classes Observation et Mesure. Indique que cette observation contient cette mesure.
+Inverse de la relation 'fait_partie_de_observation'.")
+InverseObjectProperties(<http://www.meteo.com/meteo.owl#est_observation_de> <http://www.meteo.com/meteo.owl#fait_partie_de_observation>)
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#est_observation_de> <http://www.meteo.com/meteo.owl#Observation>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#est_observation_de> <http://www.meteo.com/meteo.owl#Mesure>)
+
+# Object Property: <http://www.meteo.com/meteo.owl#est_region_de> (<http://www.meteo.com/meteo.owl#est_region_de>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#est_region_de> "Relation entre les classes Region et Ville. Indique qu'une région contient une ville.
+Inverse de la relation 'a_region'.")
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#est_region_de> <http://www.meteo.com/meteo.owl#Region>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#est_region_de> <http://www.meteo.com/meteo.owl#Station>)
+
+# Object Property: <http://www.meteo.com/meteo.owl#est_ville_de> (<http://www.meteo.com/meteo.owl#est_ville_de>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#est_ville_de> "Relation entre les classes Ville et Station. Indique qu'une ville contient une station.
+Inverse de la relation 'a_ville'.")
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#est_ville_de> <http://www.meteo.com/meteo.owl#Ville>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#est_ville_de> <http://www.meteo.com/meteo.owl#Station>)
+
+# Object Property: <http://www.meteo.com/meteo.owl#fait_partie_de_observation> (<http://www.meteo.com/meteo.owl#fait_partie_de_observation>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#fait_partie_de_observation> "Relation entre les classes Mesure et Observation. Indique qu'une mesurefait partie d'une observation.
+Inverse de la relation 'est_observation_de'.")
+ObjectPropertyDomain(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> <http://www.meteo.com/meteo.owl#Mesure>)
+ObjectPropertyRange(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> <http://www.meteo.com/meteo.owl#Observation>)
+
+# Object Property: :a_pays (:a_pays)
+
+AnnotationAssertion(rdfs:comment :a_pays "Relation entre les classes Ville et Pays, ou Region et Pays, ou Station et Pays. Indique qu'une entité Ville, Region ou Station se situe dans un pays.
+Inverse de la relation 'est_pays_de'.")
+InverseObjectProperties(:a_pays <http://www.semanticweb.org/léom/ontologies/2022/4/weather-station#est_pays_de>)
+ObjectPropertyDomain(:a_pays <http://www.meteo.com/meteo.owl#Region>)
+ObjectPropertyDomain(:a_pays <http://www.meteo.com/meteo.owl#Station>)
+ObjectPropertyDomain(:a_pays <http://www.meteo.com/meteo.owl#Ville>)
+ObjectPropertyRange(:a_pays :Pays)
+
+# Object Property: :precede (:precede)
+
+AnnotationAssertion(rdfs:comment :precede "Relation interne à la classe Observation. Indique qu'une mesure précède temporellement une autre.
+Inverse de la relation 'succede_a'.")
+InverseObjectProperties(:precede :succede_a)
+AsymmetricObjectProperty(:precede)
+ObjectPropertyDomain(:precede <http://www.meteo.com/meteo.owl#Observation>)
+ObjectPropertyRange(:precede <http://www.meteo.com/meteo.owl#Observation>)
+
+# Object Property: :succede_a (:succede_a)
+
+AnnotationAssertion(rdfs:comment :succede_a "Relation interne à la classe Observation. Indique qu'une mesure succède à temporellement une autre.
+Inverse de la relation 'precede'.")
+AsymmetricObjectProperty(:succede_a)
+ObjectPropertyDomain(:succede_a <http://www.meteo.com/meteo.owl#Observation>)
+ObjectPropertyRange(:succede_a <http://www.meteo.com/meteo.owl#Observation>)
+
+# Object Property: <http://www.semanticweb.org/léom/ontologies/2022/4/weather-station#est_pays_de> (<http://www.semanticweb.org/léom/ontologies/2022/4/weather-station#est_pays_de>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/léom/ontologies/2022/4/weather-station#est_pays_de> "Relation entre les classes Ville et Pays, ou Region et Pays, ou Station et Pays. Indique qu'une entité Pays est le pays d'une entité Ville, Region ou Station.
+Inverse de la relation 'a_pays'.")
+ObjectPropertyDomain(<http://www.semanticweb.org/léom/ontologies/2022/4/weather-station#est_pays_de> :Pays)
+ObjectPropertyRange(<http://www.semanticweb.org/léom/ontologies/2022/4/weather-station#est_pays_de> <http://www.meteo.com/meteo.owl#Region>)
+ObjectPropertyRange(<http://www.semanticweb.org/léom/ontologies/2022/4/weather-station#est_pays_de> <http://www.meteo.com/meteo.owl#Station>)
+ObjectPropertyRange(<http://www.semanticweb.org/léom/ontologies/2022/4/weather-station#est_pays_de> <http://www.meteo.com/meteo.owl#Ville>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.meteo.com/meteo.owl#a_altitude> (<http://www.meteo.com/meteo.owl#a_altitude>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#a_altitude> "Donnée chiffrée en mètres pouvant être négative ou positive, exprimée en kilomètres, correspondant à l'altitude d'un point.")
+DataPropertyDomain(<http://www.meteo.com/meteo.owl#a_altitude> <http://www.meteo.com/meteo.owl#Localisation>)
+DataPropertyDomain(<http://www.meteo.com/meteo.owl#a_altitude> <http://www.meteo.com/meteo.owl#Station>)
+DataPropertyRange(<http://www.meteo.com/meteo.owl#a_altitude> xsd:float)
+
+# Data Property: <http://www.meteo.com/meteo.owl#a_latitude> (<http://www.meteo.com/meteo.owl#a_latitude>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#a_latitude> "Donnée chiffrée allant de 0 à ± 90° correspondant à la lontitude d'un point.")
+DataPropertyDomain(<http://www.meteo.com/meteo.owl#a_latitude> <http://www.meteo.com/meteo.owl#Localisation>)
+DataPropertyDomain(<http://www.meteo.com/meteo.owl#a_latitude> <http://www.meteo.com/meteo.owl#Station>)
+DataPropertyRange(<http://www.meteo.com/meteo.owl#a_latitude> xsd:float)
+
+# Data Property: <http://www.meteo.com/meteo.owl#a_longitude> (<http://www.meteo.com/meteo.owl#a_longitude>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#a_longitude> "Donnée chiffrée allant de 0 à ± 180° correspondant à la longitude d'un point.")
+DataPropertyDomain(<http://www.meteo.com/meteo.owl#a_longitude> <http://www.meteo.com/meteo.owl#Localisation>)
+DataPropertyDomain(<http://www.meteo.com/meteo.owl#a_longitude> <http://www.meteo.com/meteo.owl#Station>)
+DataPropertyRange(<http://www.meteo.com/meteo.owl#a_longitude> xsd:float)
+
+# Data Property: <http://www.meteo.com/meteo.owl#a_valeur> (<http://www.meteo.com/meteo.owl#a_valeur>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#a_valeur> "La valeur est la donnée chiffrée résultant d'une Mesure.")
+DataPropertyDomain(<http://www.meteo.com/meteo.owl#a_valeur> <http://www.meteo.com/meteo.owl#Mesure>)
+DataPropertyRange(<http://www.meteo.com/meteo.owl#a_valeur> xsd:float)
+
+# Data Property: :a_date (:a_date)
+
+AnnotationAssertion(rdfs:comment :a_date "Valeur de date au format xsd:dateTime")
+DataPropertyDomain(:a_date <http://www.meteo.com/meteo.owl#Observation>)
+DataPropertyRange(:a_date xsd:dateTime)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.meteo.com/meteo.owl#Brouillard> (<http://www.meteo.com/meteo.owl#Brouillard>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Brouillard> "Evénement et mesure correspondant à un nuage stratifié reposant sur la surface du sol, presque toujours par temps calme, formé de gouttelettes d'eau liquide pleines. Il y a brouillard quand la Visibilité est inférieure à 1 km.")
+EquivalentClasses(<http://www.meteo.com/meteo.owl#Brouillard> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_observation_de> ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Mesure> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Visibilite>) DataSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_valeur> DatatypeRestriction(xsd:float xsd:maxExclusive "1.0"^^xsd:float)))))
+SubClassOf(<http://www.meteo.com/meteo.owl#Brouillard> <http://www.meteo.com/meteo.owl#Evenement>)
+
+# Class: <http://www.meteo.com/meteo.owl#Capteur> (<http://www.meteo.com/meteo.owl#Capteur>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Capteur> "Dispositif impliqué dans une procédure ou la mettant en œuvre. Les capteurs répondent à un stimulus, par exemple une modification de l'environnement, ou à des données d'entrée composées à partir des résultats d'observations antérieures, et génèrent un résultat. Les capteurs peuvent être hébergés par des Stations et génèrent des Mesures.")
+EquivalentClasses(<http://www.meteo.com/meteo.owl#Capteur> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#effectue> <http://www.meteo.com/meteo.owl#Mesure>) ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_capteur_de> <http://www.meteo.com/meteo.owl#Station>)))
+DisjointClasses(<http://www.meteo.com/meteo.owl#Capteur> <http://www.meteo.com/meteo.owl#Station>)
+
+# Class: <http://www.meteo.com/meteo.owl#Direction> (<http://www.meteo.com/meteo.owl#Direction>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Direction> "Orientation du vent, exprimée en degrés d'angle, mesurée par un Capteur et dont la valeur est estimée selon son axe de mesure par une Mesure.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Direction> <http://www.meteo.com/meteo.owl#Vent>)
+
+# Class: <http://www.meteo.com/meteo.owl#Evenement> (<http://www.meteo.com/meteo.owl#Evenement>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Evenement> "Phénomène météorologique pouvant être déduit de Mesures.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Evenement> <http://www.meteo.com/meteo.owl#Observation>)
+
+# Class: <http://www.meteo.com/meteo.owl#Gel> (<http://www.meteo.com/meteo.owl#Gel>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Gel> "Evènement ou série de Mesure où la Température de l'atmosphère atteint 0 °C ou descend au-dessous")
+EquivalentClasses(<http://www.meteo.com/meteo.owl#Gel> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_observation_de> ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Mesure> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Temperature>) DataSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_valeur> DatatypeRestriction(xsd:float xsd:maxInclusive "0.0"^^xsd:float)))))
+SubClassOf(<http://www.meteo.com/meteo.owl#Gel> <http://www.meteo.com/meteo.owl#Evenement>)
+
+# Class: <http://www.meteo.com/meteo.owl#Humidite> (<http://www.meteo.com/meteo.owl#Humidite>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Humidite> "Teneur en eau de l'atmosphère exprimée par une valeur de 0 à 1, mesurée par un Capteur et dont la valeur est estimée par une Mesure.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Humidite> <http://www.meteo.com/meteo.owl#Capteur>)
+
+# Class: <http://www.meteo.com/meteo.owl#Localisation> (<http://www.meteo.com/meteo.owl#Localisation>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Localisation> "Classe répertoriant les différentes manières de localiser un point.")
+
+# Class: <http://www.meteo.com/meteo.owl#Mesure> (<http://www.meteo.com/meteo.owl#Mesure>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Mesure> "Evaluation d'une grandeur d'après son rapport avec une grandeur de même espèce, prise comme unité et comme référence. Cette mesure est effectuée par un Capteur et à une valeur.")
+EquivalentClasses(<http://www.meteo.com/meteo.owl#Mesure> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Capteur>) ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> <http://www.meteo.com/meteo.owl#Observation>) DataSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_valeur> xsd:float)))
+
+# Class: <http://www.meteo.com/meteo.owl#Neige> (<http://www.meteo.com/meteo.owl#Neige>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Neige> "Evènement et série de mesure où de l'eau congelée qui tombe des nuages en flocons blancs et légers. Il faut donc que de la Pluie tombe avec une Température inférieure à 0°C.")
+EquivalentClasses(<http://www.meteo.com/meteo.owl#Neige> ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Gel> <http://www.meteo.com/meteo.owl#Pluie>))
+
+# Class: <http://www.meteo.com/meteo.owl#Observation> (<http://www.meteo.com/meteo.owl#Observation>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Observation> "Indication précise de la minute, de l'heure, du fuseau horaire, du jour, du mois, de l'année où une mesure est réalisée.")
+
+# Class: <http://www.meteo.com/meteo.owl#Orage> (<http://www.meteo.com/meteo.owl#Orage>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Orage> "Précipitations associées à des rafales de vent violentes (Rafales>100km).")
+EquivalentClasses(<http://www.meteo.com/meteo.owl#Orage> ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Pluie> <http://www.meteo.com/meteo.owl#Tempête> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_observation_de> ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Mesure> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Rafales>) DataSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_valeur> DatatypeRestriction(xsd:float xsd:minInclusive "100.0"^^xsd:float))))))
+SubClassOf(<http://www.meteo.com/meteo.owl#Orage> <http://www.meteo.com/meteo.owl#Pluie>)
+SubClassOf(<http://www.meteo.com/meteo.owl#Orage> <http://www.meteo.com/meteo.owl#Tempête>)
+
+# Class: <http://www.meteo.com/meteo.owl#Planète> (<http://www.meteo.com/meteo.owl#Planète>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Planète> "Corps céleste non lumineux par lui-même, qui gravite autour du Soleil ou, éventuellement, autour d'autres étoiles.
+Une Station peut y être repérée grâce aux coordonnées GPS.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Planète> <http://www.meteo.com/meteo.owl#Localisation>)
+
+# Class: <http://www.meteo.com/meteo.owl#Pluie> (<http://www.meteo.com/meteo.owl#Pluie>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Pluie> "Evènement correspondant à une suite de mesure où la précipitation d'eau atmosphérique sous forme de gouttes est supérieure à 0mm.")
+EquivalentClasses(<http://www.meteo.com/meteo.owl#Pluie> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_observation_de> ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Mesure> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Precipitation>) DataSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_valeur> DatatypeRestriction(xsd:float xsd:minExclusive "0.0"^^xsd:float)))))
+SubClassOf(<http://www.meteo.com/meteo.owl#Pluie> <http://www.meteo.com/meteo.owl#Evenement>)
+
+# Class: <http://www.meteo.com/meteo.owl#Precipitation> (<http://www.meteo.com/meteo.owl#Precipitation>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Precipitation> "Formes revêtues par la précipitation de l'eau dans l'atmosphère (pluie, neige, grêle) dont la quantité atteignant le sol est exprimée en millimètres. Cette quantité est mesurée par un Capteur et sa valeur est estimée par une Mesure.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Precipitation> <http://www.meteo.com/meteo.owl#Capteur>)
+
+# Class: <http://www.meteo.com/meteo.owl#Pression> (<http://www.meteo.com/meteo.owl#Pression>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Pression> "Pression exercée par la couche d'air en un lieu, exprimée en hectopascals, mesurée par un Capteur et dont la valeur est estimée par une Mesure.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Pression> <http://www.meteo.com/meteo.owl#Capteur>)
+
+# Class: <http://www.meteo.com/meteo.owl#Rafales> (<http://www.meteo.com/meteo.owl#Rafales>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Rafales> "Vitesse maximale du vent, exprimée en kilomètres/heure, mesurée par un Capteur et dont la valeur est estimée par une Mesure.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Rafales> <http://www.meteo.com/meteo.owl#Vent>)
+
+# Class: <http://www.meteo.com/meteo.owl#Region> (<http://www.meteo.com/meteo.owl#Region>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Region> "Territoire dont l'étendue variable est déterminée soit par une unité administrative ou économique, soit par la similitude du relief, du climat et de la végétation, soit par une communauté culturelle.
+Peut contenir des Villes et/ou des Stations.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Region> <http://www.meteo.com/meteo.owl#Localisation>)
+SubClassOf(<http://www.meteo.com/meteo.owl#Region> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_region_de> <http://www.meteo.com/meteo.owl#Ville>))
+
+# Class: <http://www.meteo.com/meteo.owl#Station> (<http://www.meteo.com/meteo.owl#Station>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Station> "Plate-forme météorologique qui peut accueillir des Capteurs.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Station> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_capteur> <http://www.meteo.com/meteo.owl#Capteur>))
+SubClassOf(<http://www.meteo.com/meteo.owl#Station> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_ville> <http://www.meteo.com/meteo.owl#Ville>))
+
+# Class: <http://www.meteo.com/meteo.owl#Temperature> (<http://www.meteo.com/meteo.owl#Temperature>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Temperature> "Degré de chaleur d'un lieu, en degré Celsius, mesuré par un Capteur et dont la valeur est estimée par une Mesure.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Temperature> <http://www.meteo.com/meteo.owl#Capteur>)
+
+# Class: <http://www.meteo.com/meteo.owl#Tempête> (<http://www.meteo.com/meteo.owl#Tempête>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Tempête> "Evènement ou série de mesure composé de précipitations et d'un vent moyen supérieur à 90km/h.")
+EquivalentClasses(<http://www.meteo.com/meteo.owl#Tempête> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_observation_de> ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Mesure> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Vent_moyen>) DataSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_valeur> DatatypeRestriction(xsd:float xsd:minInclusive "90.0"^^xsd:float)))))
+SubClassOf(<http://www.meteo.com/meteo.owl#Tempête> <http://www.meteo.com/meteo.owl#Evenement>)
+
+# Class: <http://www.meteo.com/meteo.owl#Vent> (<http://www.meteo.com/meteo.owl#Vent>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Vent> "Mouvement de l'air se déplaçant d'une zone de hautes pressions vers une zone de basses pression, caractérisé par trois paramètres :
+- sa vitesse moyenne (Vent_moyen)
+- ses pics de vitesse (Rafales)
+- sa direction (Direction)")
+SubClassOf(<http://www.meteo.com/meteo.owl#Vent> <http://www.meteo.com/meteo.owl#Capteur>)
+
+# Class: <http://www.meteo.com/meteo.owl#Vent_moyen> (<http://www.meteo.com/meteo.owl#Vent_moyen>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Vent_moyen> "Vitesse moyenne du vent, exprimée en kilomètres/heure, mesurée par un Capteur et dont la valeur est estimée par une Mesure.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Vent_moyen> <http://www.meteo.com/meteo.owl#Vent>)
+
+# Class: <http://www.meteo.com/meteo.owl#Ville> (<http://www.meteo.com/meteo.owl#Ville>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Ville> "Entité correspondant à une agglomération relativement importante qui peut contenir une ou plusieurs Stations et se situe dans une Région.
+Située sur la Planète Terre.
+Est null si la Planète n'est pas la Terre.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Ville> <http://www.meteo.com/meteo.owl#Localisation>)
+SubClassOf(<http://www.meteo.com/meteo.owl#Ville> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_region> <http://www.meteo.com/meteo.owl#Region>))
+SubClassOf(<http://www.meteo.com/meteo.owl#Ville> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_ville_de> <http://www.meteo.com/meteo.owl#Station>))
+
+# Class: <http://www.meteo.com/meteo.owl#Visibilite> (<http://www.meteo.com/meteo.owl#Visibilite>)
+
+AnnotationAssertion(rdfs:comment <http://www.meteo.com/meteo.owl#Visibilite> "Possibilité de voir à une certaine distance exprimée en kilomètres, mesurée par un Capteur et dont la valeur est estimée par une Mesure.")
+SubClassOf(<http://www.meteo.com/meteo.owl#Visibilite> <http://www.meteo.com/meteo.owl#Capteur>)
+
+# Class: :Blizzard (:Blizzard)
+
+AnnotationAssertion(rdfs:comment :Blizzard "Vent, glacial (Température<=0), violent (Rafales>100km) et accompagné de chutes de neige (Précipitations>0).")
+EquivalentClasses(:Blizzard ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Neige> <http://www.meteo.com/meteo.owl#Orage>))
+
+# Class: :Ouragan (:Ouragan)
+
+AnnotationAssertion(rdfs:comment :Ouragan "Evenement météo caractérisé par des rafales de vent très violentes (Rafales>=120km) et un vent moyen très fort (Vent_moyen>=90km).")
+EquivalentClasses(:Ouragan ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_observation_de> ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Mesure> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Rafales>) DataSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_valeur> DatatypeRestriction(xsd:float xsd:minInclusive "120.0"^^xsd:float)))) ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#est_observation_de> ObjectIntersectionOf(<http://www.meteo.com/meteo.owl#Mesure> ObjectSomeValuesFrom(<http://www.meteo.com/meteo.owl#effectuee_par> <http://www.meteo.com/meteo.owl#Vent_moyen>) DataSomeValuesFrom(<http://www.meteo.com/meteo.owl#a_valeur> DatatypeRestriction(xsd:float xsd:minInclusive "90.0"^^xsd:float))))))
+SubClassOf(:Ouragan <http://www.meteo.com/meteo.owl#Tempête>)
+
+# Class: :Pays (:Pays)
+
+AnnotationAssertion(rdfs:comment :Pays "Territoire d'une nation délimité par des frontières et constituant une entité géographique.")
+SubClassOf(:Pays <http://www.meteo.com/meteo.owl#Localisation>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :EMSE_Anémomètre (:EMSE_Anémomètre)
+
+AnnotationAssertion(rdfs:comment :EMSE_Anémomètre "Un anémomètre relié à la station Station_EMSE")
+ClassAssertion(<http://www.meteo.com/meteo.owl#Vent_moyen> :EMSE_Anémomètre)
+
+# Individual: :EMSE_Girouette (:EMSE_Girouette)
+
+ClassAssertion(<http://www.meteo.com/meteo.owl#Direction> :EMSE_Girouette)
+
+# Individual: :EMSE_Humidite (:EMSE_Humidite)
+
+ClassAssertion(<http://www.meteo.com/meteo.owl#Humidite> :EMSE_Humidite)
+
+# Individual: :EMSE_Precipitation (:EMSE_Precipitation)
+
+ClassAssertion(<http://www.meteo.com/meteo.owl#Precipitation> :EMSE_Precipitation)
+
+# Individual: :EMSE_Pression (:EMSE_Pression)
+
+ClassAssertion(<http://www.meteo.com/meteo.owl#Pression> :EMSE_Pression)
+
+# Individual: :EMSE_Rafales (:EMSE_Rafales)
+
+ClassAssertion(<http://www.meteo.com/meteo.owl#Rafales> :EMSE_Rafales)
+
+# Individual: :EMSE_Temperature (:EMSE_Temperature)
+
+ClassAssertion(<http://www.meteo.com/meteo.owl#Temperature> :EMSE_Temperature)
+
+# Individual: :EMSE_Visibilite (:EMSE_Visibilite)
+
+ClassAssertion(<http://www.meteo.com/meteo.owl#Visibilite> :EMSE_Visibilite)
+
+# Individual: :Humidite_23h06 (:Humidite_23h06)
+
+AnnotationAssertion(rdfs:comment :Humidite_23h06 "Une mesure d'humidité prise à 23h06 par le capteur d'humidité de la stations Station_EMSE.")
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Humidite_23h06 :EMSE_Humidite)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Humidite_23h06 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Humidite_23h06 "96.0"^^xsd:float)
+
+# Individual: :Humidité_23h00 (:Humidité_23h00)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Humidité_23h00 :EMSE_Humidite)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Humidité_23h00 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Humidité_23h00 "96.0"^^xsd:float)
+
+# Individual: :Humidité_23h12 (:Humidité_23h12)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Humidité_23h12 :EMSE_Humidite)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Humidité_23h12 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Humidité_23h12 "97.0"^^xsd:float)
+
+# Individual: :Precipitation_23h00 (:Precipitation_23h00)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Precipitation_23h00 :EMSE_Precipitation)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Precipitation_23h00 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Precipitation_23h00 "0.4"^^xsd:float)
+
+# Individual: :Precipitation_23h06 (:Precipitation_23h06)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Precipitation_23h06 :EMSE_Precipitation)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Precipitation_23h06 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Precipitation_23h06 "0.2"^^xsd:float)
+
+# Individual: :Precipitation_23h12 (:Precipitation_23h12)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Precipitation_23h12 :EMSE_Precipitation)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Precipitation_23h12 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Precipitation_23h12 "0.0"^^xsd:float)
+
+# Individual: :Pression_23h00 (:Pression_23h00)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Pression_23h00 :EMSE_Pression)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Pression_23h00 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Pression_23h00 "1007.4"^^xsd:float)
+
+# Individual: :Pression_23h06 (:Pression_23h06)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Pression_23h06 :EMSE_Pression)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Pression_23h06 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Pression_23h06 "1007.4"^^xsd:float)
+
+# Individual: :Pression_23h12 (:Pression_23h12)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Pression_23h12 :EMSE_Pression)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Pression_23h12 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Pression_23h12 "1007.4"^^xsd:float)
+
+# Individual: :Rafales_23h00 (:Rafales_23h00)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Rafales_23h00 :EMSE_Rafales)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Rafales_23h00 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Rafales_23h00 "27.0"^^xsd:float)
+
+# Individual: :Rafales_23h06 (:Rafales_23h06)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Rafales_23h06 :EMSE_Rafales)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Rafales_23h06 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Rafales_23h06 "110.0"^^xsd:float)
+
+# Individual: :Rafales_23h12 (:Rafales_23h12)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Rafales_23h12 :EMSE_Rafales)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Rafales_23h12 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Rafales_23h12 "29.0"^^xsd:float)
+
+# Individual: :Rhone-Alpes (:Rhone-Alpes)
+
+AnnotationAssertion(rdfs:comment :Rhone-Alpes "La région Rhône-Alpes")
+ClassAssertion(<http://www.meteo.com/meteo.owl#Region> :Rhone-Alpes)
+
+# Individual: :Saint-Etienne (:Saint-Etienne)
+
+AnnotationAssertion(rdfs:comment :Saint-Etienne "La ville de saint-etienne.")
+ClassAssertion(<http://www.meteo.com/meteo.owl#Ville> :Saint-Etienne)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_region> :Saint-Etienne :Rhone-Alpes)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_altitude> :Saint-Etienne "615.0"^^xsd:float)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_latitude> :Saint-Etienne "45.4506"^^xsd:float)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_longitude> :Saint-Etienne "4.3859"^^xsd:float)
+
+# Individual: :Station_EMSE (:Station_EMSE)
+
+AnnotationAssertion(rdfs:comment :Station_EMSE "Une station météo située sur le toit de l'école des mines de saint-etienne.")
+ClassAssertion(<http://www.meteo.com/meteo.owl#Station> :Station_EMSE)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_capteur> :Station_EMSE :EMSE_Anémomètre)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_capteur> :Station_EMSE :EMSE_Girouette)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_capteur> :Station_EMSE :EMSE_Humidite)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_capteur> :Station_EMSE :EMSE_Precipitation)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_capteur> :Station_EMSE :EMSE_Pression)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_capteur> :Station_EMSE :EMSE_Rafales)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_capteur> :Station_EMSE :EMSE_Temperature)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_capteur> :Station_EMSE :EMSE_Visibilite)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#a_ville> :Station_EMSE :Saint-Etienne)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_altitude> :Station_EMSE "400.0"^^xsd:float)
+
+# Individual: :Temperature_23h00 (:Temperature_23h00)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Temperature_23h00 :EMSE_Temperature)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Temperature_23h00 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Temperature_23h00 "0.1"^^xsd:float)
+
+# Individual: :Temperature_23h06 (:Temperature_23h06)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Temperature_23h06 :EMSE_Temperature)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Temperature_23h06 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Temperature_23h06 "0.0"^^xsd:float)
+
+# Individual: :Temperature_23h12 (:Temperature_23h12)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Temperature_23h12 :EMSE_Temperature)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Temperature_23h12 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Temperature_23h12 "-0.1"^^xsd:float)
+
+# Individual: :Vent_moyen_23h00 (:Vent_moyen_23h00)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Vent_moyen_23h00 :EMSE_Anémomètre)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Vent_moyen_23h00 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Vent_moyen_23h00 "16.0"^^xsd:float)
+
+# Individual: :Vent_moyen_23h06 (:Vent_moyen_23h06)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Vent_moyen_23h06 :EMSE_Anémomètre)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Vent_moyen_23h06 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Vent_moyen_23h06 "90.0"^^xsd:float)
+
+# Individual: :Vent_moyen_23h12 (:Vent_moyen_23h12)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Vent_moyen_23h12 :EMSE_Anémomètre)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Vent_moyen_23h12 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Vent_moyen_23h12 "17.0"^^xsd:float)
+
+# Individual: :Visibilite_23h06 (:Visibilite_23h06)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Visibilite_23h06 :EMSE_Visibilite)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Visibilite_23h06 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Visibilite_23h06 "0.9"^^xsd:float)
+
+# Individual: :Visibilite_23h12 (:Visibilite_23h12)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Visibilite_23h12 :EMSE_Visibilite)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Visibilite_23h12 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Visibilite_23h12 "1.0"^^xsd:float)
+
+# Individual: :Visiblite_23h00 (:Visiblite_23h00)
+
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#effectuee_par> :Visiblite_23h00 :EMSE_Visibilite)
+ObjectPropertyAssertion(<http://www.meteo.com/meteo.owl#fait_partie_de_observation> :Visiblite_23h00 <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>)
+DataPropertyAssertion(<http://www.meteo.com/meteo.owl#a_valeur> :Visiblite_23h00 "0.9"^^xsd:float)
+
+# Individual: <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00> (<http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00> "Un ensemble de mesures prises le Premier Avril 2022 à 23h00 par la station météo Station_EMSE.")
+ClassAssertion(<http://www.meteo.com/meteo.owl#Observation> <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00>)
+ObjectPropertyAssertion(:precede <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00> <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+DataPropertyAssertion(:a_date <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h00> "2022-04-01T23:00:00"^^xsd:dateTime)
+
+# Individual: <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06> (<http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06> "Un ensemble de mesures prises le Premier Avril 2022 à 23h06 par la station météo Station_EMSE.")
+ClassAssertion(<http://www.meteo.com/meteo.owl#Observation> <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06>)
+ObjectPropertyAssertion(:precede <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06> <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+DataPropertyAssertion(:a_date <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h06> "2022-04-01T23:06:00"^^xsd:dateTime)
+
+# Individual: <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12> (<http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12> "Un ensemble de mesures prises le Premier Avril 2022 à 23h12 par la station météo Station_EMSE.")
+ClassAssertion(<http://www.meteo.com/meteo.owl#Observation> <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12>)
+DataPropertyAssertion(:a_date <http://www.semanticweb.org/léom/ontologies/2022/4/untitled-ontology-10#01-04-2022_23h12> "2022-04-01T23:12:00"^^xsd:dateTime)
+
+
+)
